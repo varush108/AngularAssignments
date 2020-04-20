@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output ,EventEmitter} from '@angular/core';
 import { Todo } from '../../assignment.component';
 
 @Component({
@@ -11,5 +11,12 @@ export class Assignment2Component {
   @Input()
   data: Todo[]
 
+ 
+  selectedTodo: Todo;
+
+
+  onSelectTodo(todo: Todo) {
+    this.selectedTodo =todo;
+  }
 
 }

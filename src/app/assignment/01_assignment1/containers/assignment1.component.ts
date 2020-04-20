@@ -7,9 +7,16 @@ import { Component } from '@angular/core';
 })
 export class Assignment1Component {
 
+  hideMessage = true
   inputText : string;
   onInputChanged(inputText: string) {
     this.inputText = inputText;
+    if(inputText.length==0){
+      this.hideMessage = true;
+    }
+    else{
+      this.hideMessage=false;
+    }
   }
  
 
